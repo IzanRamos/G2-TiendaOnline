@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Tienda de Lego Flowers</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
+    <!-- ENCABEZADO -->
     <header>
-        <h1>BIRIBIRI BAMBAM</h1>
+        <h1>BIRI BIRI BAM BAM</h1>
     </header>
 
+    <!-- CARRUSEL -->
     <section id="intro">
-        <img src="images/banner.jpg" alt="banner" class="portada">
-        <p>Bienvenido a la Tienda de Tecnología, donde encontrarás los mejores productos al mejor precio. Explora nuestro catálogo y disfruta de una experiencia de compra rápida y sencilla.</p>
+        <div id="carrusel" class="carrusel">
+            <button id="anterior" class="flecha">❮</button>
+            <img id="imagen-carrusel"S src="images/banner.jpg" alt="Lego Flowers Banner" class="portada">
+            <button id="siguiente" class="flecha">❯</button>
+        </div>
+        <p>
+            Bienvenido a nuestra tienda de <strong>Lego Flowers</strong>. Descubre los sets de flores más hermosos 
+            y creativos hechos con piezas de Lego. ¡Perfectos para regalar o decorar tu hogar!
+        </p>
     </section>
 
-    <!--CATALOGO-->
+    <!-- CATALOGO -->
     <section id="catalogo">
-        <h2>Catálogo de Productos</h2>
+        <h2>Catálogo de Sets de Lego Flowers</h2>
         <div class="productos">
             <!-- Producto 1 -->
             <div class="producto">
-                <img src="images/producto1.jpg" alt="Producto 1">
-                <h3>Producto 1</h3>
-                <p></p>
+                <img src="images/cerezo.png" alt="Lego Cerezo en Flor">
+                <h3>Lego Cerezo en Flor</h3>
+                <p>Precio: 49.99€</p>
                 <button class="btn-agregar">Agregar al carrito</button>
             </div>
             <!-- Producto 2 -->
             <div class="producto">
-                <img src="images/producto2.jpg" alt="Producto 2">
-                <h3>Producto 2</h3>
-                <p></p>
+                <img src="images/crisantemo.jpg" alt="Lego Crisantemos">
+                <h3>Lego Crisantemos</h3>
+                <p>Precio: 39.99€</p>
                 <button class="btn-agregar">Agregar al carrito</button>
             </div>
             <!-- Producto 3 -->
             <div class="producto">
-                <img src="images/producto3.jpg" alt="Producto 3">
-                <h3>Producto 3</h3>
-                <p></p>
+                <img src="images/girasol.jpg" alt="Lego Girasoles">
+                <h3>Lego Girasoles</h3>
+                <p>Precio: 34.99€</p>
                 <button class="btn-agregar">Agregar al carrito</button>
             </div>
             <!-- Producto 4 -->
             <div class="producto">
-                <img src="images/producto4.jpg" alt="Producto 4">
-                <h3>Producto 4</h3>
-                <p></p>
+                <img src="images/loto.png" alt="Lego Flor de Loto">
+                <h3>Lego Flor de Loto</h3>
+                <p>Precio: 29.99€</p>
                 <button class="btn-agregar">Agregar al carrito</button>
             </div>
             <!-- Producto 5 -->
             <div class="producto">
-                <img src="images/producto5.jpg" alt="Producto 5">
-                <h3>Producto 5</h3>
-                <p></p>
+                <img src="images/orquidea.png" alt="Lego Orquídeas">
+                <h3>Lego Orquídeas</h3>
+                <p>Precio: 59.99€</p>
                 <button class="btn-agregar">Agregar al carrito</button>
             </div>
             <!-- Producto 6 -->
             <div class="producto">
-                <img src="images/producto6.jpg" alt="Producto 5">
-                <h3>Producto 6</h3>
-                <p></p>
+                <img src="images/rosas.jpg" alt="Lego Rosas">
+                <h3>Lego Rosas</h3>
+                <p>Precio: 44.99€</p>
                 <button class="btn-agregar">Agregar al carrito</button>
             </div>
         </div>
     </section>
 
-    <!--CARRITO-->
+    <!-- CARRITO -->
     <aside id="carrito">
         <h2>Carrito de Compras</h2>
         <ul id="lista-carrito">
-            <!--lista carrito-->
+            <!-- Los productos añadidos al carrito se mostrarán aquí -->
         </ul>
         <p><strong>Total:</strong> <span id="total">0€</span></p>
         <button id="vaciar-carrito">Vaciar carrito</button>
     </aside>
 
-    <script src="script.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>
