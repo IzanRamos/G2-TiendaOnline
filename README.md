@@ -15,7 +15,7 @@ Es necesario la creación de issues, el uso de proyectos y utilizar de forma cor
 2. Abre el archivo index.html en tu navegador para visualizar la página principal.
 3. Navega por los productos y prueba el funcionamiento del carrito de compras.
 
-# Creadores
+## Creadores
 - Anthuan Lugris
 - Izan Ramos
 - Aroa Garde
