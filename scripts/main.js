@@ -5,11 +5,28 @@ const listaCarrito = document.getElementById("lista-carrito");
 const totalElemento = document.getElementById("total");
 const botonVaciarCarrito = document.getElementById("vaciar-carrito");
 
-// Función para actualizar el valor del carrito
+
+let imagenesCarrusel = [
+    "images/banner.jpg",    
+    "images/banner1.jpg",
+    "images/banner2.jpg",
+];
+
+let indiceActual = 0;
+const imagenCarrusel = document.getElementById("imagen-carrusel");
+
+function cambiarImagenCarrusel() {
+    indiceActual = (indiceActual + 1) % imagenesCarrusel.length;
+    imagenCarrusel.src = imagenesCarrusel[indiceActual];
+}
+
+setInterval(cambiarImagenCarrusel, 3000);
+
+
 function actualizarValorCarrito(precioASumar) {
     precioCarrito += precioASumar;
 
-    // Asegurarse de que el total no sea negativo
+    
     if (precioCarrito < 0) {
         precioCarrito = 0;
     }
@@ -18,7 +35,7 @@ function actualizarValorCarrito(precioASumar) {
     totalElemento.textContent = `${precioCarrito.toFixed(2)}€`;
 }
 
-// Función para agregar un producto al carrito
+
 function agregarAlCarrito(nombre, precio) {
     carrito.push({ nombre, precio });
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -26,7 +43,7 @@ function agregarAlCarrito(nombre, precio) {
     renderCarrito();
 }
 
-// Función para eliminar un producto del carrito
+
 function eliminarDelCarrito(index) {
     const productoEliminado = carrito[index];
     actualizarValorCarrito(-productoEliminado.precio);
@@ -35,7 +52,7 @@ function eliminarDelCarrito(index) {
     renderCarrito();
 }
 
-// Función para vaciar el carrito
+
 function vaciarCarrito() {
     carrito = [];
     precioCarrito = 0; // Restablecer el total a 0
@@ -44,7 +61,7 @@ function vaciarCarrito() {
     renderCarrito();
 }
 
-// Función para renderizar el carrito
+
 function renderCarrito() {
     listaCarrito.innerHTML = "";
     carrito.forEach((producto, index) => {
@@ -60,8 +77,8 @@ function renderCarrito() {
     totalElemento.textContent = `${precioCarrito.toFixed(2)}€`;
 }
 
-// Evento para vaciar el carrito al hacer clic en el botón
+
 botonVaciarCarrito.addEventListener("click", vaciarCarrito);
 
-// Inicializar el carrito cuando la página carga
+botonVaciarCarrito.addEventListener("click", vaciarCarrito)
 renderCarrito();
